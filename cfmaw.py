@@ -7,7 +7,7 @@ tag = None
 class PlayerS1:
     def __init__(self, tag):
         self.tag = tag
-        self.url = f"https://api.clashofmagic.cc/magic-s1/Api/Player/%23{tag}"
+        self.url = f"https://api.clashofmagic.cc/magic-s1/Api/Player/{tag}"
 
     def get(self):
         response = requests.get(url = self.url, headers = {"accept": "application/json"})
@@ -22,12 +22,12 @@ class PlayerS1:
         for chars in remove_chars:
             newjson = newjson.replace(chars, "")
 
-        return newjson
+        print(newjson)
 
 class PlayerS2:
     def __init__(self, tag):
         self.tag = tag
-        self.url = f"https://api.clashofmagic.cc/magic-s2/Api/Player/%23{tag}"
+        self.url = f"https://api.clashofmagic.cc/magic-s2/Api/Player/{tag}"
 
     def get(self):
         response = requests.get(url = self.url, headers = {"accept": "application/json"})
@@ -42,12 +42,12 @@ class PlayerS2:
         for chars in remove_chars:
             newjson = newjson.replace(chars, "")
 
-        return newjson
+        print(newjson)
 
 class ClanS1:
     def __init__(self, tag):
         self.tag = tag
-        self.url = f"https://api.clashofmagic.cc/magic-s1/Api/Clan/%23{tag}"
+        self.url = f"https://api.clashofmagic.cc/magic-s1/Api/Clan/{tag}"
 
     def get(self):
         response = requests.get(url = self.url, headers = {"accept": "application/json"})
@@ -62,7 +62,7 @@ class ClanS1:
         for chars in remove_chars:
             newjson = newjson.replace(chars, "")
 
-        return newjson
+        print(newjson)
 
 class ClanS2:
     def __init__(self, tag):
@@ -82,7 +82,7 @@ class ClanS2:
         for chars in remove_chars:
             newjson = newjson.replace(chars, "")
 
-        return newjson
+        print(newjson)
 """
 Demo
 playertag = input("Enter a random S2 player tag (hashtag is not needed): \n")
