@@ -2,8 +2,6 @@ import requests
 import json
 from pprint import pprint
 
-tag = None
-
 class PlayerS1:
     def __init__(self, tag):
         self.tag = tag
@@ -22,7 +20,7 @@ class PlayerS1:
         for chars in remove_chars:
             newjson = newjson.replace(chars, "")
 
-        print(newjson)
+        return newjson
 
 class PlayerS2:
     def __init__(self, tag):
@@ -42,7 +40,7 @@ class PlayerS2:
         for chars in remove_chars:
             newjson = newjson.replace(chars, "")
 
-        print(newjson)
+        return newjson
 
 class ClanS1:
     def __init__(self, tag):
@@ -62,7 +60,7 @@ class ClanS1:
         for chars in remove_chars:
             newjson = newjson.replace(chars, "")
 
-        print(newjson)
+        return newjson
 
 class ClanS2:
     def __init__(self, tag):
@@ -82,11 +80,13 @@ class ClanS2:
         for chars in remove_chars:
             newjson = newjson.replace(chars, "")
 
-        print(newjson)
+        return newjson
+
+# Remove the triple quotes to see it in action
 """
-Demo
 playertag = input("Enter a random S2 player tag (hashtag is not needed): \n")
 tag = playertag
 playerS2 = PlayerS2(tag)
-playerS2.get()
+get = playerS2.get()
+print(get)
 """
