@@ -1,92 +1,94 @@
 import requests
 import json
-from pprint import pprint
 
 class PlayerS1:
     def __init__(self, tag):
         self.tag = tag
         self.url = f"https://api.clashofmagic.cc/magic-s1/Api/Player/{tag}"
 
-    def get(self):
+    def getInfo(self):
         response = requests.get(url = self.url, headers = {"accept": "application/json"})
-        jsonresponse = response.content
-        jsoninfo = json.loads(response.content)
+        jsonInfo = json.loads(response.content)
 
-        #pprint(jsoninfo) # not sure which is better tbh
-        origjson = json.dumps(jsoninfo, indent=0, sort_keys=True)
-        remove_chars = '{[""]},'
+        createTime = jsonInfo["analytics"]["createTime"]
+        bestTrophies = jsonInfo["avatar"]["commodity"]["achievements"]["bestTrophies"]
+        league = jsonInfo["avatar"]["league"]
+        leagueIcon = jsonInfo["avatar"]["leagueIcon"]
+        name = jsonInfo["avatar"]["name"]
+        townHallLevels = jsonInfo["avatar"]["townHallLevels"]["main"]
+        xp = jsonInfo["avatar"]["xp"]
+        clanTag = jsonInfo["clanTag"]
 
-        newjson = origjson
-        for chars in remove_chars:
-            newjson = newjson.replace(chars, "")
+        bestTrophies = str(bestTrophies)
+        townHallLevels = str(townHallLevels)
+        xp = str(xp)
 
-        return newjson
+        return "Name: "+name+"\nLeague: "+league+"\nBest Trophies: "+bestTrophies+"\nCreation Time: "+createTime+"\nTown Hall: "+townHallLevels+"\nXP: "+xp+"\nClan Tag: "+clanTag
 
 class PlayerS2:
     def __init__(self, tag):
         self.tag = tag
         self.url = f"https://api.clashofmagic.cc/magic-s2/Api/Player/{tag}"
 
-    def get(self):
+    def getInfo(self):
         response = requests.get(url = self.url, headers = {"accept": "application/json"})
-        jsonresponse = response.content
-        jsoninfo = json.loads(response.content)
+        jsonInfo = json.loads(response.content)
 
-        #pprint(jsoninfo)
-        origjson = json.dumps(jsoninfo, indent=0, sort_keys=True)
-        remove_chars = '{[""]},'
+        createTime = jsonInfo["analytics"]["createTime"]
+        bestTrophies = jsonInfo["avatar"]["commodity"]["achievements"]["bestTrophies"]
+        league = jsonInfo["avatar"]["league"]
+        leagueIcon = jsonInfo["avatar"]["leagueIcon"]
+        name = jsonInfo["avatar"]["name"]
+        townHallLevels = jsonInfo["avatar"]["townHallLevels"]["main"]
+        xp = jsonInfo["avatar"]["xp"]
+        clanTag = jsonInfo["clanTag"]
 
-        newjson = origjson
-        for chars in remove_chars:
-            newjson = newjson.replace(chars, "")
+        bestTrophies = str(bestTrophies)
+        townHallLevels = str(townHallLevels)
+        xp = str(xp)
 
-        return newjson
+        return "Name: "+name+"\nLeague: "+league+"\nBest Trophies: "+bestTrophies+"\nCreation Time: "+createTime+"\nTown Hall: "+townHallLevels+"\nXP: "+xp+"\nClan Tag: "+clanTag
 
 class ClanS1:
     def __init__(self, tag):
         self.tag = tag
         self.url = f"https://api.clashofmagic.cc/magic-s1/Api/Clan/{tag}"
 
-    def get(self):
+    def getInfo(self):
         response = requests.get(url = self.url, headers = {"accept": "application/json"})
-        jsonresponse = response.content
-        jsoninfo = json.loads(response.content)
+        jsonInfo = json.loads(response.content)
+        dumpedjson = json.dumps(jsonInfo, indent=0, sort_keys=True)
+        removeChars = '{[""]},'
+        
+        for chars in removeChars:
+            outputjson = dumpedjson.replace(chars, "")
 
-        #pprint(jsoninfo)
-        origjson = json.dumps(jsoninfo, indent=0, sort_keys=True)
-        remove_chars = '{[""]},'
+        return outputjson
 
-        newjson = origjson
-        for chars in remove_chars:
-            newjson = newjson.replace(chars, "")
-
-        return newjson
-
+# Commented until I find a fix or something, idk
+"""
 class ClanS2:
     def __init__(self, tag):
         self.tag = tag
-        self.url = f"https://api.clashofmagic.cc/magic-s2/Api/Clan/%23{tag}"
+        self.url = f"https://api.clashofmagic.cc/magic-s2/Api/Clan/{tag}"
 
-    def get(self):
+    def getInfo(self):
         response = requests.get(url = self.url, headers = {"accept": "application/json"})
-        jsonresponse = response.content
-        jsoninfo = json.loads(response.content)
+        jsonInfo = json.loads(response.content)
+        dumpedjson = json.dumps(jsonInfo, indent=0, sort_keys=True)
+        removeChars = '{[""]},'
 
-        #pprint(jsoninfo)
-        origjson = json.dumps(jsoninfo, indent=0, sort_keys=True)
-        remove_chars = '{[""]},'
+        for chars in removeChars:
+            outputjson = dumpedjson.replace(chars, "")
 
-        newjson = origjson
-        for chars in remove_chars:
-            newjson = newjson.replace(chars, "")
-
-        return newjson
+        return outputjson
+"""
 
 # Remove the triple quotes to see it in action
 """
-playertag = input("Enter a random S2 player tag (hashtag is not needed): \n")
+playertag = input("Enter a random S2 player tag (A hashtag will result in an error): \n")
 tag = playertag
 playerS2 = PlayerS2(tag)
-get = playerS2.get()
+get = playerS2.getInfo()
 print(get)
 """
