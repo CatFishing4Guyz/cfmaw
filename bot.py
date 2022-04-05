@@ -14,7 +14,7 @@ bot = discord.Bot()
 async def on_ready():
     print(f"We have logged in as {bot.user}")
 
-@bot.slash_command(guild_ids=[831412377869221899], description="Check some dude's S1 info")
+@bot.slash_command(description="Check some dude's S1 info")
 async def s1player(ctx, tag: Option(str, "Enter some dude's S1 tag. A hashtag will result in an error.", required = True)):
     playerS1 = PlayerS1(tag)
     get = playerS1.getInfo()
@@ -26,7 +26,7 @@ async def s1player(ctx, tag: Option(str, "Enter some dude's S1 tag. A hashtag wi
     
     await ctx.respond(embed=player)
 
-@bot.slash_command(guild_ids=[831412377869221899], description="Check some dude's S2 info")
+@bot.slash_command(description="Check some dude's S2 info")
 async def s2player(ctx, tag: Option(str, "Enter some dude's S2 tag. A hashtag will result in an error.", required = True)):
     playerS2 = PlayerS2(tag)
     get = playerS2.getInfo()
@@ -40,7 +40,7 @@ async def s2player(ctx, tag: Option(str, "Enter some dude's S2 tag. A hashtag wi
 
 # Commented until I find out why it isn't working
 """
-@bot.slash_command(guild_ids=[831412377869221899], description="Check some S1 clan's info")
+@bot.slash_command(description="Check some S1 clan's info")
 async def s1clan(ctx, tag: Option(str, "Enter some S1 clan's tag. A hashtag will result in an error.", required = True)):
     clanS1 = ClanS1(tag)
     get = clanS1.getInfo()
@@ -52,7 +52,7 @@ async def s1clan(ctx, tag: Option(str, "Enter some S1 clan's tag. A hashtag will
     
     await ctx.respond(embed=player)
 
-@bot.slash_command(guild_ids=[831412377869221899], description="Check some S2 clan's info")
+@bot.slash_command(description="Check some S2 clan's info")
 async def s2clan(ctx, tag: Option(str, "Enter some S2 clan's tag. A hashtag will result in an error.", required = True)):
     clanS2 = ClanS2(tag)
     get = clanS2.getInfo()
