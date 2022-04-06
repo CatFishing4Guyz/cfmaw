@@ -23,6 +23,7 @@ class PlayerS1:
         bestTrophies = str(bestTrophies)
         townHallLevels = str(townHallLevels)
         xp = str(xp)
+        clanTag = str(clanTag)
 
         # Storing the league in a variable until I find something to do with it
         league = jsonInfo["avatar"]["league"]
@@ -50,6 +51,7 @@ class PlayerS2:
         bestTrophies = str(bestTrophies)
         townHallLevels = str(townHallLevels)
         xp = str(xp)
+        clanTag = str(clanTag)
 
         league = jsonInfo["avatar"]["league"]
 
