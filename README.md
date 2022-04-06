@@ -9,4 +9,4 @@ Visit the API here: https://api.clashofmagic.cc/swagger
 ## Credits
 Magic Man, for developing the API, a bunch of help, and pointing out stupid mistakes.
 
-Jelosus, for suggestions, a bunch of help and pointing out stupid mistakes.
+Jelosus1, for suggestions, a bunch of help and pointing out stupid mistakes.
