@@ -5,3 +5,8 @@ API Wrapper for Clash of Magic, named after the 5th dungeon in Link's Awakening 
 **Note: This is not an official thingy**
 
 Visit the API here: https://api.clashofmagic.cc/swagger
+
+## Credits
+Magic Man, for developing the API, a bunch of help, and pointing out stupid mistakes.
+
+Jelosus, for suggestions, a bunch of help and pointing out stupid mistakes.
