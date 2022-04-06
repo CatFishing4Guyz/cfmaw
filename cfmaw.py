@@ -24,6 +24,9 @@ class PlayerS1:
         townHallLevels = str(townHallLevels)
         xp = str(xp)
 
+        # Storing the league in a variable until I find something to do with it
+        league = jsonInfo["avatar"]["league"]
+
         return "Name: "+name+"\nLeague: "+league+"\nBest Trophies: "+bestTrophies+"\nCreation Time: "+createTime+"\nTown Hall: "+townHallLevels+"\nXP: "+xp+"\nClan Tag: "+clanTag
 
 class PlayerS2:
@@ -47,6 +50,8 @@ class PlayerS2:
         bestTrophies = str(bestTrophies)
         townHallLevels = str(townHallLevels)
         xp = str(xp)
+
+        league = jsonInfo["avatar"]["league"]
 
         return "Name: "+name+"\nLeague: "+league+"\nBest Trophies: "+bestTrophies+"\nCreation Time: "+createTime+"\nTown Hall: "+townHallLevels+"\nXP: "+xp+"\nClan Tag: "+clanTag
 
@@ -114,4 +119,3 @@ playerS2 = PlayerS2(tag)
 get = playerS2.getInfo()
 print(get)
 """
-
