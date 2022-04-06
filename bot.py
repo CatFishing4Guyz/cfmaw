@@ -12,7 +12,7 @@ bot = discord.Bot()
 async def on_ready():
     print(f"We have logged in as {bot.user}")
 
-@bot.slash_command(guild_ids=[831412377869221899, 929320814724124722], description="Check some dude's info")
+@bot.slash_command(description="Check some dude's info")
 async def player(ctx, server: Option(str, 'Choose between "S1" (same as S3) or "S2" (same as S4)', required = True), tag: Option(str, "Enter some dude's tag. A hashtag will result in an error.", required = True)):
     if server == 'S1':
         playerS1 = PlayerS1(tag)
@@ -35,7 +35,7 @@ async def player(ctx, server: Option(str, 'Choose between "S1" (same as S3) or "
     
     await ctx.respond(embed=player)
 
-@bot.slash_command(guild_ids=[831412377869221899, 929320814724124722], description="Check some clan's info")
+@bot.slash_command(description="Check some clan's info")
 async def clan(ctx, server: Option(str, 'Choose between "S1" (same as S3) or "S2" (same as S4)', required = True), tag: Option(str, "Enter some clan's tag. A hashtag will result in an error.", required = True)):
     if server == 'S1':
         clanS1 = ClanS1(tag)
