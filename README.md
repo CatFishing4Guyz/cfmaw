@@ -1,4 +1,4 @@
-# CatFish's MAW
+## CatFish's MAW
 
 API Wrapper for Clash of Magic, named after the 5th dungeon in Link's Awakening (one of my favorite games), written in Python.
 
