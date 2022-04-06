@@ -19,6 +19,7 @@ class PlayerS1:
         xp = jsonInfo["avatar"]["xp"]
         clanTag = jsonInfo["clanTag"]
 
+        # Converting int to str so concatenation is possible
         bestTrophies = str(bestTrophies)
         townHallLevels = str(townHallLevels)
         xp = str(xp)
@@ -57,16 +58,26 @@ class ClanS1:
     def getInfo(self):
         response = requests.get(url = self.url, headers = {"accept": "application/json"})
         jsonInfo = json.loads(response.content)
-        dumpedjson = json.dumps(jsonInfo, indent=0, sort_keys=True)
-        removeChars = '{[""]},'
-        
-        for chars in removeChars:
-            outputjson = dumpedjson.replace(chars, "")
 
-        return outputjson
+        chatLocales = jsonInfo["info"]["chatLocales"]
+        level = jsonInfo["info"]["level"]
+        mainTrophies = jsonInfo["info"]["mainTrophies"]
+        name = jsonInfo["info"]["name"]
+        requiredTownHallLevel = jsonInfo["info"]["requiredTownHallLevel"]
+        requiredTrophies = jsonInfo["info"]["requiredTrophies"]
+        tags = jsonInfo["info"]["tags"]
+        inviteType = jsonInfo["info"]["type"]
+        warFrequency = jsonInfo["info"]["warFrequency"]
+        xp = jsonInfo["info"]["xp"]
 
-# Commented until I find a fix or something, idk
-"""
+        level = str(level)
+        mainTrophies = str(mainTrophies)
+        requiredTownHallLevel = str(requiredTownHallLevel)
+        requiredTrophies = str(requiredTrophies)
+        xp = str(xp)
+
+        return "Name: "+name+"\nLevel: "+level+"\nXP: "+xp+"\nTrophies: "+mainTrophies+"\nInvite Type: "+inviteType+"\nWar Frequency: "+warFrequency+"\nRequired Trophies: "+requiredTrophies+"\nRequired Town Hall Level: "+requiredTownHallLevel+"\nLanguage: "+chatLocales
+
 class ClanS2:
     def __init__(self, tag):
         self.tag = tag
@@ -75,14 +86,25 @@ class ClanS2:
     def getInfo(self):
         response = requests.get(url = self.url, headers = {"accept": "application/json"})
         jsonInfo = json.loads(response.content)
-        dumpedjson = json.dumps(jsonInfo, indent=0, sort_keys=True)
-        removeChars = '{[""]},'
 
-        for chars in removeChars:
-            outputjson = dumpedjson.replace(chars, "")
+        chatLocales = jsonInfo["info"]["chatLocales"]
+        level = jsonInfo["info"]["level"]
+        mainTrophies = jsonInfo["info"]["mainTrophies"]
+        name = jsonInfo["info"]["name"]
+        requiredTownHallLevel = jsonInfo["info"]["requiredTownHallLevel"]
+        requiredTrophies = jsonInfo["info"]["requiredTrophies"]
+        tags = jsonInfo["info"]["tags"]
+        inviteType = jsonInfo["info"]["type"]
+        warFrequency = jsonInfo["info"]["warFrequency"]
+        xp = jsonInfo["info"]["xp"]
 
-        return outputjson
-"""
+        level = str(level)
+        mainTrophies = str(mainTrophies)
+        requiredTownHallLevel = str(requiredTownHallLevel)
+        requiredTrophies = str(requiredTrophies)
+        xp = str(xp)
+
+        return "Name: "+name+"\nLevel: "+level+"\nXP: "+xp+"\nTrophies: "+mainTrophies+"\nInvite Type: "+inviteType+"\nWar Frequency: "+warFrequency+"\nRequired Trophies: "+requiredTrophies+"\nRequired Town Hall Level: "+requiredTownHallLevel+"\nLanguage: "+chatLocales
 
 # Remove the triple quotes to see it in action
 """
@@ -92,3 +114,4 @@ playerS2 = PlayerS2(tag)
 get = playerS2.getInfo()
 print(get)
 """
+
