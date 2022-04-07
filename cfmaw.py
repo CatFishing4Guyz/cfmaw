@@ -7,22 +7,24 @@ class PlayerS1:
         self.url = f"https://api.clashofmagic.cc/magic-s1/Api/Player/{tag}"
 
     def getInfo(self):
-        response = requests.get(url = self.url, headers = {"accept": "application/json"})
-        jsonInfo = json.loads(response.content)
+        self.response = requests.get(url = self.url, headers = {"accept": "application/json"})
+        self.jsonInfo = json.loads(self.response.content)
 
-        createTime = jsonInfo["analytics"]["createTime"]
-        mainTrophies = str(jsonInfo["avatar"]["mainTrophies"])
-        league = jsonInfo["avatar"]["league"]
-        leagueIcon = jsonInfo["avatar"]["leagueIcon"]
-        name = jsonInfo["avatar"]["name"]
-        townHallLevels = str(jsonInfo["avatar"]["townHallLevels"]["main"])
-        level = str(jsonInfo["avatar"]["level"])
-        clanTag = str(jsonInfo["clanTag"])
+        name = self.jsonInfo["avatar"]["name"]
+        league = self.jsonInfo["avatar"]["league"]
+        mainTrophies = str(self.jsonInfo["avatar"]["mainTrophies"]) # Convert to string
+        townHallLevels = str(self.jsonInfo["avatar"]["townHallLevels"]["main"]) # Convert to string
+        level = str(self.jsonInfo["avatar"]["level"]) # Convert to string
+        clanTag = str(self.jsonInfo["clanTag"]) # Convert to string
+        createTime = self.jsonInfo["analytics"]["createTime"]
 
-        # Storing the league in a variable until I find something to do with it
-        league = jsonInfo["avatar"]["league"]
+        return "Name: "+name+"\nLeague: "+league+"\nTrophies: "+mainTrophies+"\nTown Hall: "+townHallLevels+"\nLevel: "+level+"\nClan Tag: "+clanTag+"\nCreation Time: "+createTime
 
-        return "Name: "+name+"\nLeague: "+league+"\nTrophies: "+mainTrophies+"\nCreation Time: "+createTime+"\nTown Hall: "+townHallLevels+"\nLevel: "+level+"\nClan Tag: "+clanTag
+    def getLeague(self):
+        self.leagueIcon = self.jsonInfo["avatar"]["leagueIcon"]
+
+        return self.leagueIcon
+
         
 class PlayerS2:
     def __init__(self, tag):
@@ -30,21 +32,23 @@ class PlayerS2:
         self.url = f"https://api.clashofmagic.cc/magic-s2/Api/Player/{tag}"
 
     def getInfo(self):
-        response = requests.get(url = self.url, headers = {"accept": "application/json"})
-        jsonInfo = json.loads(response.content)
+        self.response = requests.get(url = self.url, headers = {"accept": "application/json"})
+        self.jsonInfo = json.loads(self.response.content)
 
-        createTime = jsonInfo["analytics"]["createTime"]
-        mainTrophies = str(jsonInfo["avatar"]["mainTrophies"])
-        league = jsonInfo["avatar"]["league"]
-        leagueIcon = jsonInfo["avatar"]["leagueIcon"]
-        name = jsonInfo["avatar"]["name"]
-        townHallLevels = str(jsonInfo["avatar"]["townHallLevels"]["main"])
-        level = str(jsonInfo["avatar"]["level"])
-        clanTag = str(jsonInfo["clanTag"])
+        name = self.jsonInfo["avatar"]["name"]
+        league = self.jsonInfo["avatar"]["league"]
+        mainTrophies = str(self.jsonInfo["avatar"]["mainTrophies"]) # Convert to string
+        townHallLevels = str(self.jsonInfo["avatar"]["townHallLevels"]["main"]) # Convert to string
+        level = str(self.jsonInfo["avatar"]["level"]) # Convert to string
+        clanTag = str(self.jsonInfo["clanTag"]) # Convert to string
+        createTime = self.jsonInfo["analytics"]["createTime"]
 
-        league = jsonInfo["avatar"]["league"]
+        return "Name: "+name+"\nLeague: "+league+"\nTrophies: "+mainTrophies+"\nTown Hall: "+townHallLevels+"\nLevel: "+level+"\nClan Tag: "+clanTag+"\nCreation Time: "+createTime
 
-        return "Name: "+name+"\nLeague: "+league+"\nTrophies: "+mainTrophies+"\nCreation Time: "+createTime+"\nTown Hall: "+townHallLevels+"\nLevel: "+level+"\nClan Tag: "+clanTag
+    def getLeague(self):
+        self.leagueIcon = self.jsonInfo["avatar"]["leagueIcon"]
+
+        return self.leagueIcon
 
 class ClanS1:
     def __init__(self, tag):
@@ -55,15 +59,14 @@ class ClanS1:
         response = requests.get(url = self.url, headers = {"accept": "application/json"})
         jsonInfo = json.loads(response.content)
 
-        chatLocales = jsonInfo["info"]["chatLocales"]
-        level = str(jsonInfo["info"]["level"])
-        mainTrophies = str(jsonInfo["info"]["mainTrophies"])
         name = jsonInfo["info"]["name"]
-        requiredTownHallLevel = str(jsonInfo["info"]["requiredTownHallLevel"])
-        requiredTrophies = str(jsonInfo["info"]["requiredTrophies"])
-        tags = jsonInfo["info"]["tags"]
+        level = str(jsonInfo["info"]["level"]) # Convert to string
+        mainTrophies = str(jsonInfo["info"]["mainTrophies"]) # Convert to string
         inviteType = jsonInfo["info"]["type"]
         warFrequency = jsonInfo["info"]["warFrequency"]
+        requiredTrophies = str(jsonInfo["info"]["requiredTrophies"]) # Convert to string
+        requiredTownHallLevel = str(jsonInfo["info"]["requiredTownHallLevel"]) # Convert to string
+        chatLocales = jsonInfo["info"]["chatLocales"]
 
         return "Name: "+name+"\nLevel: "+level+"\nTrophies: "+mainTrophies+"\nInvite Type: "+inviteType+"\nWar Frequency: "+warFrequency+"\nRequired Trophies: "+requiredTrophies+"\nRequired Town Hall Level: "+requiredTownHallLevel+"\nLanguage: "+chatLocales
 
@@ -76,22 +79,20 @@ class ClanS2:
         response = requests.get(url = self.url, headers = {"accept": "application/json"})
         jsonInfo = json.loads(response.content)
 
-        chatLocales = jsonInfo["info"]["chatLocales"]
-        level = str(jsonInfo["info"]["level"])
-        mainTrophies = str(jsonInfo["info"]["mainTrophies"])
         name = jsonInfo["info"]["name"]
-        requiredTownHallLevel = str(jsonInfo["info"]["requiredTownHallLevel"])
-        requiredTrophies = str(jsonInfo["info"]["requiredTrophies"])
-        tags = jsonInfo["info"]["tags"]
+        level = str(jsonInfo["info"]["level"]) # Convert to string
+        mainTrophies = str(jsonInfo["info"]["mainTrophies"]) # Convert to string
         inviteType = jsonInfo["info"]["type"]
         warFrequency = jsonInfo["info"]["warFrequency"]
+        requiredTrophies = str(jsonInfo["info"]["requiredTrophies"]) # Convert to string
+        requiredTownHallLevel = str(jsonInfo["info"]["requiredTownHallLevel"]) # Convert to string
+        chatLocales = jsonInfo["info"]["chatLocales"]
 
         return "Name: "+name+"\nLevel: "+level+"\nTrophies: "+mainTrophies+"\nInvite Type: "+inviteType+"\nWar Frequency: "+warFrequency+"\nRequired Trophies: "+requiredTrophies+"\nRequired Town Hall Level: "+requiredTownHallLevel+"\nLanguage: "+chatLocales
 
 # Remove the triple quotes to see it in action
 """
-playertag = input("Enter a random S2 player tag (A hashtag will result in an error): \n")
-tag = playertag
+tag = input("Enter a random S2 player tag (A hashtag will result in an error): \n")
 playerS2 = PlayerS2(tag)
 get = playerS2.getInfo()
 print(get)
