@@ -12,30 +12,36 @@ bot = discord.Bot()
 async def on_ready():
     print(f"We have logged in as {bot.user}")
 
-@bot.slash_command(description="Check some dude's info")
+@bot.slash_command(guild_ids=[YourServerIDHere], description="Check some dude's info")
 async def player(ctx, server: Option(str, 'Choose between "S1" (same as S3) or "S2" (same as S4)', required = True), tag: Option(str, "Enter some dude's tag. A hashtag will result in an error.", required = True)):
     if server == 'S1':
         playerS1 = PlayerS1(tag)
         get = playerS1.getInfo()
+        getleague = playerS1.getLeague()
 
         player=discord.Embed(title="Some dude's info",
                             url="https://www.youtube.com/watch?v=dQw4w9WgXcQ",
                             description=get,
                             color=000000)
+        player.set_image(url=getleague)
+        
     elif server == 'S2':
         playerS2 = PlayerS2(tag)
         get = playerS2.getInfo()
+        getleague = playerS2.getLeague()
 
         player=discord.Embed(title="Some dude's info",
                             url="https://www.youtube.com/watch?v=dQw4w9WgXcQ",
                             description=get,
                             color=000000)
+        player.set_image(url=getleague)
+        
     else:
         await ctx.respond("Invalid server. Keep in mind that it's case sensitive.")
     
     await ctx.respond(embed=player)
 
-@bot.slash_command(description="Check some clan's info")
+@bot.slash_command(guild_ids=[YourServerIDHere], description="Check some clan's info")
 async def clan(ctx, server: Option(str, 'Choose between "S1" (same as S3) or "S2" (same as S4)', required = True), tag: Option(str, "Enter some clan's tag. A hashtag will result in an error.", required = True)):
     if server == 'S1':
         clanS1 = ClanS1(tag)
