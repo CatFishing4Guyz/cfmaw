@@ -67,7 +67,6 @@ class PlayerS1:
         self.jsonInfo = json.loads(self.response.content)
         
         self.leagueIcon = self.jsonInfo["avatar"]["leagueIcon"]
-        return self.leagueIcon
 
     def region(self):
         self.response = requests.get(url = self.url, headers = {"accept": "application/json"})
