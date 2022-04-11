@@ -9,9 +9,13 @@ This random file will (hopefully?) give you a bit of knowledge of what this modu
 `README.md` - the README file
 
 ### Required modules
+**I've made this using Python 3.10.2, but I don't know what is the minimum version required.**
+
 `requests` for connecting to the API
 
 `json` for loading the JSON file and printing the various values
+
+**Note: Both modules already exist when you install Python**
 
 ### The code itself
 Each file (except `__init__.py`) has a class with the same name as the file. 
