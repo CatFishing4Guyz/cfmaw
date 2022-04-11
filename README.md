@@ -10,3 +10,10 @@ Visit the API here: https://api.clashofmagic.cc/swagger
 Magic Man, for developing the API, a bunch of help, and pointing out stupid mistakes.
 
 Jelosus1, for suggestions, a bunch of help and pointing out stupid mistakes.
+
+## Installing
+```
+git clone https://github.com/Monkeys30/cfmaw
+cd cfmaw
+pip install -U .[cfmaw]
+```
