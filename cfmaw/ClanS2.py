@@ -1,7 +1,7 @@
 class ClanS2:
     def __init__(self, tag):
         self.tag = tag
-        self.url = f"https://api.clashofmagic.cc/magic-s2/Api/Clan/{tag}"
+        self.url = f"https://api.clashofmagic.cc/magic-s2/clans/{tag}"
 
     def name(self):
         self.response = requests.get(url = self.url, headers = {"accept": "application/json"})
