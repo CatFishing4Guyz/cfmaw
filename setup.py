@@ -5,4 +5,4 @@ setup(name="cfmaw",
       description="API wrapper for Clash of Magic",
       author="Monkeys30",
       url="https://github.com/Monkeys30/cfmaw",
-      package_dir={"": "cfmaw})
+      package_dir={"": "cfmaw"})
