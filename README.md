@@ -10,9 +10,6 @@ You can find it [here](https://github.com/Monkeys30/cfmaw/tree/main/docs/main.md
 
 There isn't much there at the moment. When I learn JavaScript or something I'll maybe build a website.
 
-## Credits
-Magic Man, for developing the API, a bunch of help, and pointing out stupid mistakes.
-
 ## Installing
 ```
 git clone https://github.com/Monkeys30/cfmaw
@@ -22,3 +19,6 @@ pip install -U .[cfmaw]
 
 *For some reason (for me, at least), Python doesn't think the module `cfmaw` exists.
 I'm not sure if other people have this issue or it's just me.*
+
+## Credits
+Magic Man, for developing the API, a bunch of help, and pointing out stupid mistakes.
