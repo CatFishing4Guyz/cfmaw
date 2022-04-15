@@ -4,7 +4,7 @@ import json
 class PlayerS1:
     def __init__(self, tag):
         self.tag = tag
-        self.url = f"https://api.clashofmagic.cc/magic-s1/clans/{tag}"
+        self.url = f"https://api.clashofmagic.cc/magic-s1/players/{tag}"
 
     def name(self):
         self.response = requests.get(url = self.url, headers = {"accept": "application/json"})
