@@ -28,7 +28,7 @@ This is then repeated for everything in the JSON I consider relevant.
 ### Using the module
 Start by importing the `cfmaw` module, and creating an instance of what you want and its server.
 
-***Note: A hashtag will result in an error***
+***Note: A hashtag is optional***
 ```
 tag = input("Enter a tag: ")
 playerS1 = cfmaw.PlayerS1(tag)
