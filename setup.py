@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name="cfmaw",
-      version="1.0",
+      version="1.1",
       description="API wrapper for Clash of Magic",
       author="Monkeys30",
       url="https://github.com/Monkeys30/cfmaw",
