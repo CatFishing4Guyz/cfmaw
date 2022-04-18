@@ -1,3 +1,6 @@
+import requests
+import json
+
 class ClanS2:
     def __init__(self, tag):
         self.tag = tag
