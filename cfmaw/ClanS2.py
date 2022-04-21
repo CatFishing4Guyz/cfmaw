@@ -107,21 +107,21 @@ class WarS2:
         self.response = requests.get(url = self.url, headers = {"accept": "application/json"})
         self.jsonInfo = json.loads(self.response.content)
 
-        self.enemyTag = self.jsonInfo["teams"]["alliance"]["tag"]
+        self.enemyTag = self.jsonInfo["opponent"]["alliance"]["tag"]
         return self.enemyTag
 
     def enemyName(self):
         self.response = requests.get(url = self.url, headers = {"accept": "application/json"})
         self.jsonInfo = json.loads(self.response.content)
 
-        self.enemyName = self.jsonInfo["teams"]["alliance"]["name"]
+        self.enemyName = self.jsonInfo["opponent"]["alliance"]["name"]
         return self.enemyName
 
     def enemyLevel(self):
         self.response = requests.get(url = self.url, headers = {"accept": "application/json"})
         self.jsonInfo = json.loads(self.response.content)
 
-        self.enemyLevel = str(self.jsonInfo["teams"]["alliance"]["level"]) # int
+        self.enemyLevel = str(self.jsonInfo["opponent"]["alliance"]["level"]) # int
         return self.enemyLevel
 
     def duration(self):
