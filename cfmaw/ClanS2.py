@@ -3,7 +3,7 @@ import json
 
 class ClanS2:
     def __init__(self, tag):
-        self.tag = tag
+        self.tag = tag.strip('#')
         self.url = f"https://api.clashofmagic.cc/magic-s2/clans/{tag}"
 
     def name(self):
