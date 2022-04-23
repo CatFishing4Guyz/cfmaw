@@ -1,15 +1,31 @@
 import cfmaw 
 
+#=================================================#
+# Simple file to demonstrate cfmaw at its finest  #
+#=================================================#
+
 # Outputs the player name of the tag you entered
-"""
-tag = input("Enter a player tag (S2): ")
-playerS2 = cfmaw.PlayerS2(tag)
-print(playerS2.name())
-"""
+def playerDemo():
+    tag = input("Enter a player tag: ")
+    server = input("Enter the server the player exists on: ")
+    player = cfmaw.Player(server, tag)
+    print(player.name())
 
 # Outputs the state of a clan, e.g., is it at war?
-"""
-tag = input("Enter a clan tag (S2): ")
-warS2 = cfmaw.WarS2(tag)
-print(warS2.state())
-"""
+def clanWarDemo():
+    tag = input("Enter a clan tag: ")
+    server = input("Enter the server the clan exists on: ")
+    clan = cfmaw.Clan(server, tag)
+    print(clan.name())
+
+# Outputs whatever token thing or something, idk
+def tokenDemo():
+    tag = input("Enter a player tag: ")
+    server = input("Enter the server the player exists on: ")
+    yourtoken = input("Enter an API token: ")
+    token = cfmaw.Token(server, tag, yourtoken)
+    print(token.getResponse())
+
+playerDemo()
+clanWarDemo()
+tokenDemo()

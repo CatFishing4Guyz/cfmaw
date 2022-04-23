@@ -15,8 +15,6 @@ This random file will (hopefully?) give you a bit of knowledge of what this modu
 
 `json` for loading the JSON file and printing the various values
 
-**Note: Both modules already exist when you install Python**
-
 ### The code itself
 Each file (except `__init__.py`) has a class with the same name as the file. 
 The `__init__` method requires a `tag` parameter, which is used by the first line of the method, and the second line has the url that this module connects to.
