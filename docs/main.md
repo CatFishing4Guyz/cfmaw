@@ -26,11 +26,12 @@ This is then repeated for everything in the JSON I consider relevant.
 ### Using the module
 Start by importing the `cfmaw` module, and creating an instance of what you want and its server.
 
-***Note: A hashtag is optional, but I haven't tested that out***
+***Note: A hashtag is optional, but I'm not entirely sure about that***
 ```
 tag = input("Enter a tag: ")
-playerS1 = cfmaw.PlayerS1(tag)
-print(playerS1.league())
+server = input("Enter the server the player exists on: ")
+player = cfmaw.Player(server, tag)
+print(player.league())
 ```
 
 Hopefully your output will be something like:
