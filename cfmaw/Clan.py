@@ -91,7 +91,7 @@ class War:
         self.state = self.jsonInfo["state"]
         return self.state
 
-    def enemyTag(self): # the keyword is a misnomer, 'alliance' is the enemy
+    def enemyTag(self):
         self.response = requests.get(url = self.url, headers = {"accept": "application/json"})
         self.jsonInfo = json.loads(self.response.content)
         self.enemyTag = self.jsonInfo["opponent"]["alliance"]["tag"]
