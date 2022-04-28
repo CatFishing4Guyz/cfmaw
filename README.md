@@ -5,7 +5,7 @@ API Wrapper for Clash of Magic, named after the 5th dungeon in Link's Awakening 
 
 Visit the API here: https://api.clashofmagic.cc
 
-There is also another wrapper written in TypeScript by Jelosus2 which you can find [here](https://github.com/Jelosus2/clashofmagic.js)
+There is also another wrapper written in TypeScript by Jelosus2 which you can find [here](https://github.com/Jelosus2/clashofmagic.js).
 
 But mine is obviously better ;)
 
