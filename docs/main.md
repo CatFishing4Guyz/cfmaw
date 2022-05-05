@@ -15,11 +15,12 @@ This random file will (hopefully?) give you a bit of knowledge of what this modu
 
 `json` for loading the JSON file and printing the various values
 
-### The code itself
-Each file (except `__init__.py`) has a class with the same name as the file. 
-The `__init__` method requires a `tag` parameter, which is used by the first line of the method, and the second line has the url that this module connects to.
-Whatever you entered into the tag parameter is then used by `self.url`.
-Other objects will then use the `requests` module to make a request, and the `json` module uses the JSON in the url and is stored in the variable `jsonInfo`.
+### The code itself 
+The `__init__` method of each class requires a `server` and `tag` parameter, which is used by the first line of the method,
+and the second line has the url that this module connects to.
+Whatever you entered into the parameters is then used by `self.url`.
+The `requests` module is obviously made to connect to the API,
+and the `json` module uses the JSON in the url and is stored in the variable `jsonInfo`.
 Then a variable is made which uses `jsonInfo` and gets a particular value in the JSON, which is then returned.
 This is then repeated for everything in the JSON I consider relevant.
 
@@ -31,7 +32,7 @@ Start by importing the `cfmaw` module, and creating an instance of what you want
 tag = input("Enter a tag: ")
 server = input("Enter the server the player exists on: ")
 player = cfmaw.Player(server, tag)
-print(player.league())
+print(player.league)
 ```
 
 Hopefully your output will be something like:
