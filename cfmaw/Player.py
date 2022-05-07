@@ -21,7 +21,7 @@ class Player:
         self.region = self.jsonInfo["region"] # useless
         self.leagueIcon = self.jsonInfo["avatar"]["leagueIcon"]
         self.createTime = self.jsonInfo["analytics"]["createTime"]
-        self.tag = jsonInfo["tag"]
+        self.tag = self.jsonInfo["tag"]
         self.builderLosses = str(self.jsonInfo["avatar"]["statistics"]["builderLosses"])
         self.builderDraws = str(self.jsonInfo["avatar"]["statistics"]["builderDraws"])
         self.builderWins = str(self.jsonInfo["avatar"]["statistics"]["builderWins"])
@@ -29,7 +29,7 @@ class Player:
         self.mainDefenseWins = str(self.jsonInfo["avatar"]["statistics"]["mainDefenseWins"])
         self.warStars = str(self.jsonInfo["avatar"]["commodity"]["achievements"]["warStars"])
         self.bestBuilderTrophies = str(self.jsonInfo["avatar"]["commodity"]["achievements"]["bestBuilderTrophies"])
-        self.bestTrophies = str(self.jsonInfo["avatar"]["commodity"]["achievements"]["bestTrophies"]
+        self.bestTrophies = str(self.jsonInfo["avatar"]["commodity"]["achievements"]["bestTrophies"])
 
 class Token:
     def __init__(self, server, tag, token):

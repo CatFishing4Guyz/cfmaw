@@ -32,9 +32,9 @@ class War:
         
         self.membersCount = str(self.jsonInfo["membersCount"]) # int
         self.state = self.jsonInfo["state"]
-        self.endTime = jsonInfo["warEndTime"]
-        self.startTime = jsonInfo["warStartTime"]
-        self.duration = jsonInfo["warDuration"]
+        self.endTime = self.jsonInfo["warEndTime"]
+        self.startTime = self.jsonInfo["warStartTime"]
+        self.duration = self.jsonInfo["warDuration"]
         self.enemyLevel = str(self.jsonInfo["opponent"]["alliance"]["level"]) # int
         self.enemyName = self.jsonInfo["opponent"]["alliance"]["name"]
         self.enemyTag = self.jsonInfo["opponent"]["alliance"]["tag"]
