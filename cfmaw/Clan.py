@@ -5,36 +5,35 @@ class Clan:
     def __init__(self, server, tag):
         self.server = server.lower()
         self.tag = tag.strip('#')
-        self.url = f"https://api.clashofmagic.cc/magic-{self.server}/clans/{self.tag}"
-        self.response = requests.get(url = self.url, headers = {"accept": "application/json"})
-        self.jsonInfo = json.loads(self.response.content)
+        __url = f"https://api.clashofmagic.cc/magic-{self.server}/clans/{self.tag}"
+        __get = requests.get(url = __url, headers = {"accept": "application/json"})
+        __clan = json.loads(__get.content)
 
-        # The stuff
-        self.name = self.jsonInfo["info"]["name"]
-        self.level = str(self.jsonInfo["info"]["level"])
-        self.inviteType = self.jsonInfo["info"]["type"]
-        self.builderTrophies = str(self.jsonInfo["info"]["builderTrophies"])
-        self.mainTrophies = str(self.jsonInfo["info"]["mainTrophies"])
-        self.warFrequency = self.jsonInfo["info"]["warFrequency"]
-        self.requiredTrophies = str(self.jsonInfo["info"]["requiredTrophies"])
-        self.clanLocation = self.jsonInfo["info"]["clanLocation"]
-        self.language = self.jsonInfo["info"]["chatLocales"]
-        self.requiredTownHallLevel = str(self.jsonInfo["info"]["requiredTownHallLevel"])
-        self.requiredBuilderTrophies = str(self.jsonInfo["info"]["requiredBuilderTrophies"])
+        self.name = __clan["info"]["name"]
+        self.level = str(__clan["info"]["level"])
+        self.inviteType = __clan["info"]["type"]
+        self.builderTrophies = str(__clan["info"]["builderTrophies"])
+        self.mainTrophies = str(__clan["info"]["mainTrophies"])
+        self.warFrequency = __clan["info"]["warFrequency"]
+        self.requiredTrophies = str(__clan["info"]["requiredTrophies"])
+        self.clanLocation = __clan["info"]["clanLocation"]
+        self.language = __clan["info"]["chatLocales"]
+        self.requiredTownHallLevel = str(__clan["info"]["requiredTownHallLevel"])
+        self.requiredBuilderTrophies = str(__clan["info"]["requiredBuilderTrophies"])
 
 class War:
     def __init__(self, server, tag):
         self.server = server.lower()
         self.tag = tag.strip('#')
-        self.url = f"https://api.clashofmagic.cc/magic-{self.server}/clans/{self.tag}/currentwar"
-        self.response = requests.get(url = self.url, headers = {"accept": "application/json"})
-        self.jsonInfo = json.loads(self.response.content)
+        __url = f"https://api.clashofmagic.cc/magic-{self.server}/clans/{self.tag}/currentwar"
+        __get = requests.get(url = __url, headers = {"accept": "application/json"})
+        __war = json.loads(__get.content)
         
-        self.membersCount = str(self.jsonInfo["membersCount"]) # int
-        self.state = self.jsonInfo["state"]
-        self.endTime = self.jsonInfo["warEndTime"]
-        self.startTime = self.jsonInfo["warStartTime"]
-        self.duration = self.jsonInfo["warDuration"]
-        self.enemyLevel = str(self.jsonInfo["opponent"]["alliance"]["level"]) # int
-        self.enemyName = self.jsonInfo["opponent"]["alliance"]["name"]
-        self.enemyTag = self.jsonInfo["opponent"]["alliance"]["tag"]
+        self.membersCount = str(__war["membersCount"])
+        self.state = __war["state"]
+        self.endTime = __war["warEndTime"]
+        self.startTime = __war["warStartTime"]
+        self.duration = __war["warDuration"]
+        self.enemyLevel = str(__war["opponent"]["alliance"]["level"])
+        self.enemyName = __war["opponent"]["alliance"]["name"]
+        self.enemyTag = __war["opponent"]["alliance"]["tag"]

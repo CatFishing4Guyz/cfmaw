@@ -6,7 +6,7 @@ This random file will (hopefully?) give you a bit of knowledge of what this modu
 
 `docs/` - the documentation, and has the file you're reading right now
 
-`README.md` - the README file
+`samples/` - examples of code that demonstrate cfmaw
 
 ### Required modules
 **I've made this using Python 3.10.2, but I don't know what is the minimum version required.**
@@ -40,4 +40,4 @@ Hopefully your output will be something like:
 Legendary
 ```
 
-And that's it, replace a few names and you can do a bunch of stuff with this module.
+And that's it, replace a few things and you can do a bunch of stuff with this module.
