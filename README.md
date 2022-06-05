@@ -19,6 +19,27 @@ and their modified app?
 
 Here is my final commit on this repository, with improvements, fixing mistakes. Any typos or errors will stay that way.
 
+## Oh look! Another commit!
+Hey, Patrik. I saw you read the confession. Fuck you, fuck Jelosus, fuck Sherry, fuck everyone in the Discord
+server. My life's gotten better after I quit spending 12 hours a day on my computer in the dark, patrolling
+your server in case something bad happens, which never will. Kxng is probably neutral in this battle
+but he won't care, like I never will about him either. Alive is doesn't care about this whole thing, either.
+I can't believe I spent a whole year hanging out on an online hideout for something as meaningless as a
+modification of a game. Jelosus and Sherry are the pure definition of complete utter fucknuts. I hate Jelosus
+and everything he does; shut the fuck up with your bragging about C#. "iTs HaRd To CoDe 127 cS fILeS xD". Shut
+the fuck up, no one gives a shit and never will. Why would they, who's gonna say "Wow!" to having no life? Fuck
+Sherry and his "Hm"'s, "It's good tho"'s and "Yeah"'s. You have nothing to say and never will. Tell Jelo that
+you're learning something and he'll probably try his best to learn the same thing so he looks smarter than he
+really is. A week later he's going to start bragging about this totally real thing he did after learning something.
+Wow! Who cares? Sherry is the dumbest one of all. Say something? He's probably going to brush it aside with "Hm"
+before changing the topic to something that Jelo did, with Sherry taking as much credit for doing nothing. Add Icons
+to your shitty bot? Now a very important person, "Bot Developer", and a contributor. Do something actually nice? Nope,
+nobody will ever talk about you again. Only I deserve to be worshipped, nobody else. I am the only one that
+matters in this universe, and nobody else. Not those 3 weirdos who escaped the mental asylum. The members are just
+as fucking stupid. Tell them something a thousand times, WITH THE FUCKING ANSWER A FEW SCROLLS ABOVE, and they'll
+still ask about something that's been asked to death. Nobody except me has done anything about it. All
+of you are all mindless shitheads and eternal virgins. I rest my case.
+
 ## CatFish's MAW
 API Wrapper for Clash of Magic, named after the 5th dungeon in Link's Awakening (one of my favorite games), written in Python.
 
