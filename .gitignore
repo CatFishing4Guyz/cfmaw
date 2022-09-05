@@ -1,8 +1,11 @@
 __pycache__/
+build/
+cfmaw.egg-info/
 
 # These two files are the same ones in samples/
 # The reason why they exist is so I don't have
 # to keep moving those files to the root of
 # the project, which gets annoying.
+
 example.py
 samplebot.py

@@ -15,12 +15,10 @@ There isn't much there at the moment. When I learn JavaScript or something I'll 
 
 ## Installing
 ```
-git clone https://github.com/Monkeys30/cfmaw
+git clone https://github.com/CatFishing4Guyz/cfmaw.git
 cd cfmaw
-python setup.py install
+pip install .
 ```
-
-Installing does not work, just do what [#2](https://github.com/Monkeys30/cfmaw/issues/2) suggests.
 
 ## Credits
 Magic Man, for developing the API, a bunch of help, and pointing out stupid mistakes.
