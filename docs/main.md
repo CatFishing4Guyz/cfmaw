@@ -1,5 +1,6 @@
 ## CatFish's MAW
-This random file will (hopefully?) give you a bit of knowledge of what this module does and how it works (in fact, even I don't know).
+This file will (hopefully?) give you a bit of knowledge of what this does and how it
+works (in fact, even I don't know).
 
 ### Project Structure
 `cfmaw/` - contains the source files
@@ -16,28 +17,26 @@ This random file will (hopefully?) give you a bit of knowledge of what this modu
 `json` for loading the JSON file and printing the various values
 
 ### The code itself 
-The `__init__` method of each class requires a `server` and `tag` parameter, which is used by the first line of the method,
-and the second line has the url that this module connects to.
-Whatever you entered into the parameters is then used by `self.url`.
-The `requests` module is obviously made to connect to the API,
-and the `json` module uses the JSON in the url and is stored in the variable `jsonInfo`.
-Then a variable is made which uses `jsonInfo` and gets a particular value in the JSON, which is then returned.
-This is then repeated for everything in the JSON I consider relevant.
+The `__init__` method of each class requires a `server` and `tag` parameter, which is used by
+the first two lines of the method, and the third line has the URL that this module connects to.
+Whatever you entered into the parameters is then used by `self.url`. The `requests` module is
+obviously made to connect to the API, and the `json` module uses the JSON in the URL and can be
+stored in the variable `__clan`, `__player`, `__war`, `__token` (depending on the class). Finally,
+the different attributes store the values in the JSON, and can be used.
 
 ### Using the module
 Start by importing the `cfmaw` module, and creating an instance of what you want and its server.
+Hashtags are optional.
 
-***Note: A hashtag is optional, but I'm not entirely sure about that***
 ```
-tag = input("Enter a tag: ")
-server = input("Enter the server the player exists on: ")
-player = cfmaw.Player(server, tag)
+player = cfmaw.Player("S1", "PURU2J0")
 print(player.league)
 ```
 
 Hopefully your output will be something like:
+
 ```
-Legendary
+Titan1
 ```
 
-And that's it, replace a few things and you can do a bunch of stuff with this module.
+And that's it, replace a few things and you can do a bunch of stuff with it.

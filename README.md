@@ -9,7 +9,7 @@ There is also another wrapper written in TypeScript by Jelosus2 which you can fi
 Don't bother though, mine is obviously better ;)
 
 ## Documentation
-You can find it [here](https://github.com/Monkeys30/cfmaw/tree/main/docs/main.md).
+You can find it [here](https://github.com/CatFishing4Guyz/cfmaw/tree/main/docs/main.md).
 
 There isn't much there at the moment. When I learn JavaScript or something I'll maybe build a website.
 
